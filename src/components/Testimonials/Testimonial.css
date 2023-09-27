@@ -1,0 +1,96 @@
+.Testimonials {
+  display: flex;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
+.left-t {
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  text-transform: uppercase;
+  color: white;
+}
+.left-t > :nth-child(1) {
+  color: #f48915;
+  font-weight: bold;
+}
+.left-t > :nth-child(2),
+.left-t > :nth-child(3) {
+  font-weight: bold;
+  font-size: 3rem;
+}
+.left-t > :nth-child(4) {
+  text-transform: none;
+  text-align: justify;
+  letter-spacing: 2px;
+  line-height: 40px;
+}
+
+/* Testimonial Navigation Buttons */
+.testimonial-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.testimonial-buttons .testimonial-button {
+  background-color: transparent;
+  border: 1px solid #f48915;
+  color: #f48915;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.testimonial-buttons .testimonial-button:hover {
+  background-color: #f48915;
+  color: white;
+}
+.testimonial-buttons .testimonial-button.active {
+  background-color: #f48915;
+  color: white;
+}
+
+.right-t {
+  flex: 1;
+  position: relative;
+}
+.right-t > img {
+  position: absolute;
+  width: 17rem;
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  right: 8rem;
+  top: 2rem;
+  border-radius: 10px;
+}
+.right-t > :nth-child(1) {
+  position: absolute;
+  width: 17rem;
+  height: 20rem;
+  border: 2px solid orange;
+  background-color: transparent;
+  right: 9rem;
+  top: 0.9rem;
+}
+.right-t > :nth-child(2) {
+  position: absolute;
+  width: 17rem;
+  height: 19rem;
+  right: 7rem;
+  top: 4rem;
+  background: #f48915;
+}
+.right-t .arrows {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 3rem;
+}
+.right-t .arrows > img {
+  width: 1.5rem;
+  cursor: pointer;
+}/*# sourceMappingURL=Testimonial.css.map */

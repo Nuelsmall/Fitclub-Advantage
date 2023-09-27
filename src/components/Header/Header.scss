@@ -1,0 +1,24 @@
+$orangeHover: #f48915;
+
+
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo{
+  width: 10rem;
+  height: 3rem;
+}
+
+.header-menu{
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+  color: white;
+  li:hover{
+    cursor: pointer;
+    color: $orangeHover;
+  }  
+}
+

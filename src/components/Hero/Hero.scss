@@ -1,0 +1,234 @@
+$orangeHover: #f48915;
+$grayHero: #9c9c9c;
+$darkGreyHero: #464D53;
+$caloryCard: #656565;
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-sideHero {
+  padding: 2rem;
+  padding-top: 1.5rem;
+  flex: 3;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+
+  .best-ad {
+    margin-top: 4rem;
+    border-radius: 4rem;
+    width: fit-content;
+    padding: 20px 12px;
+    text-transform: uppercase;
+    color: white;
+    background-color: #363d42;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    >span {
+      z-index: 2;
+    }
+
+    >div {
+      position: absolute;
+      background-color: $orangeHover;
+      width: 5.4rem;
+      height: 80%;
+      left: 8px;
+      border-radius: 3rem;
+      z-index: 1;
+    }
+  }
+}
+
+.hero-text{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: white;
+  text-overflow: inherit;
+  >div:nth-of-type(3){
+    font-size: 1rem;
+    font-weight: 200;
+    text-transform: none;
+    letter-spacing: 1px;
+    width: 80%;
+  }
+}
+
+.figures{
+  display: flex;
+  gap: 2rem;
+  div{
+    display: flex;
+    flex-direction: column;
+    span:nth-of-type(1){
+      color: white;
+      font-size: 2rem;
+    }
+
+    span:nth-of-type(2){
+      color: $grayHero;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.hero-buttons{
+  display: flex;
+  gap: 1rem;
+  font-weight: normal;
+  >:nth-child(1){
+    color: white;
+    background-color: $orangeHover;
+    width: 8rem;
+  }
+  >:nth-child(2){
+    color: white;
+    background-color: transparent;
+    width: 8rem;
+    border: 2px solid $orangeHover;
+  }
+
+}
+
+// Right side styling for the hero section
+.right-sideHero {
+  flex: 1;
+  position: relative;
+  background-color: $orangeHover;
+  >.btn{
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+    color: black;
+  }
+  .heart-rate{
+    display: flex;
+    flex-direction: column;
+    background-color: $darkGreyHero;
+    width: fit-content;
+    padding: 1rem;
+    align-items: start;
+    border-radius: 5px;
+    position: absolute;
+    right: 4rem;
+    top: 7rem;
+    img{
+      width: 2rem;
+    }
+    >:nth-child(2){
+      color: $grayHero;
+    }
+    >:nth-child(3) {
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+  .hero-image{
+    position: absolute;
+    top: 10rem;
+    right: 8rem;
+    width: 23rem;
+  }
+  .hero-image-back{
+    position: absolute;
+    top: 4rem;
+    right: 20rem;
+    z-index: -1;
+    width: 15rem;
+  }
+  .calories {
+    display: flex;
+    gap: 2rem;
+    background-color: $caloryCard;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 15rem;
+    position: absolute;
+    top: 32rem;
+    right: 28rem;
+    img{
+      width: 3rem;
+    }
+    div{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      :nth-child(1){
+        color: $grayHero;
+      }
+      :nth-child(2){
+        color: white;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.hero-blur {
+  width: 22rem;
+  height: 30rem;
+  left: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .hero{
+    flex-direction: column;
+  }
+  .hero-blur{
+    width: 14rem;
+  }
+  .best-ad{
+    margin-top: 0;
+    font-size: small;
+    align-self: center;
+    transform: scale(0.8);
+  }
+
+  .hero-text{
+    font-size: xx-large;
+    align-items: center;
+    justify-content: center;
+    >:nth-of-type(3) {
+      font-size: small;
+      font-weight: 200;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+  }
+  .hero-buttons{
+    justify-content: center;
+  }
+  .figures > div > span:nth-of-type(1) {
+    font-size: large;    
+  }
+
+  .figures > div > span:nth-of-type(2) {
+    font-size: small;    
+  }
+
+  .right-sideHero{
+    position: relative;
+    background: none;
+  }
+
+  .heart-rate{
+    left: 1rem;
+    top: 2rem;
+  }
+
+  .calories{
+    position: relative;
+    top: 5rem;
+    left: 2rem;
+  }
+}

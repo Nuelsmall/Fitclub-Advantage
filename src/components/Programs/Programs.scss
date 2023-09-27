@@ -1,0 +1,63 @@
+ $orangeHover: #f48915;
+ $planCard: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
+
+
+
+
+.Programs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+  .programs-header {
+    display: flex;
+    gap: 5rem;
+    font-weight: bold;
+    font-size: 3rem;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+}
+
+.program-categories {
+  display: flex;
+  gap: 1rem;
+.category {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    padding: 2rem;
+    gap: 1rem;
+    color: white;
+    justify-content: space-between;
+    border-radius: 1rem;
+     >:nth-child(1) {
+      width: 2rem;    
+      gap: 2rem;
+      fill: white;
+    }
+    >:nth-child(2) {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    >:nth-child(3) {
+      font-size: 0.9rem;
+      line-height: 25px;
+    }
+    >.join-now {
+      display: flex;
+      align-content: center;
+      gap: 2rem;
+      // justify-content: space-between;
+      >img {
+        width: 1rem;
+      }
+    }
+  }
+}
+.category:hover {
+  cursor: pointer;
+  background: $planCard;
+}
